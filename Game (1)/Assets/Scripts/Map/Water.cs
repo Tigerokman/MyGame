@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-
     private int _slow = 50;
     private int _usual = 200;
 
