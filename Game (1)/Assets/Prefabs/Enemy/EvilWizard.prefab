@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 8949224682855988478}
   - component: {fileID: 3458025368196088775}
   - component: {fileID: 5198838054065863855}
+  - component: {fileID: 389408675136315441}
   m_Layer: 7
   m_Name: EvilWizard
   m_TagString: Untagged
@@ -173,12 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17e7284a38214b4fa37aba2cdb10f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointAttack: {fileID: 3458025368939650356}
   _health: 25
   _reward: 25
   _expirience: 30
-  _damage: 1
-  _attackRange: 0.9
   _speed: 3.5
 --- !u!114 &8775177832635329590
 MonoBehaviour:
@@ -298,6 +296,21 @@ NavMeshAgent:
   m_BaseOffset: 0.75
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &389408675136315441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458025368196088768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a0b1083f7829744ae576bcde7e0320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
+  _attackRange: 0.9
+  PointAttack: {fileID: 3458025368939650356}
 --- !u!1 &3458025368939650359
 GameObject:
   m_ObjectHideFlags: 0

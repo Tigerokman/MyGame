@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 8154479773522605662}
   - component: {fileID: 1694250911174120905}
   - component: {fileID: 983054973477526118}
+  - component: {fileID: 6526846421168559643}
   m_Layer: 7
   m_Name: Mushroom
   m_TagString: Untagged
@@ -156,15 +157,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef150fcecce58f43b6ed92e35e7e735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointAttack: {fileID: 8142703753301646653}
   _health: 8
   _reward: 3
   _expirience: 6
-  _damage: 5
-  _attackRange: 0.35
   _speed: 2
-  Fireball: {fileID: 0}
-  _target: {fileID: 0}
 --- !u!50 &-5018693346271354626
 Rigidbody2D:
   serializedVersion: 4
@@ -330,3 +326,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transitions:
   - {fileID: 7484586314071483150}
+--- !u!114 &6526846421168559643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681605170521000842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a0b1083f7829744ae576bcde7e0320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 5
+  _attackRange: 0.35
+  PointAttack: {fileID: 8142703753301646653}

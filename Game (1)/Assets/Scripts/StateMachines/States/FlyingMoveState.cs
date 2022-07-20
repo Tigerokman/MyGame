@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(EnemyActions))]
 public class FlyingMoveState : State
 {
     private Enemy _enemy;
+    private EnemyActions _enemyActions;
     private float _latestPositionX;
     private string _move = "IsMove";
     private float _colliderNavMesh = 0.05f;
@@ -14,6 +16,7 @@ public class FlyingMoveState : State
     private void Awake()
     {
         _enemy = GetComponent<Enemy>();
+        _enemyActions = GetComponent<EnemyActions>();
     }
 
     private void Start()
@@ -34,7 +37,7 @@ public class FlyingMoveState : State
     private void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, _enemy.Speed * Time.deltaTime);
-        _enemy.Flip(_move, _latestPositionX);
+        _enemyActions.Flip(_move, _latestPositionX);
         _latestPositionX = _enemy.transform.position.x;
     }
 

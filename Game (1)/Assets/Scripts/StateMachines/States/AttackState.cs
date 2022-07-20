@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(EnemyActions))]
 public class AttackState : State
 {
     private string _attack = "IsAttack";
+    private EnemyActions _enemyActions;
     private Enemy _enemy;
 
     public void Awake()
     {
         _enemy = GetComponent<Enemy>();
+        _enemyActions = GetComponent<EnemyActions>();
     }
 
     private void OnEnable()
@@ -27,7 +30,7 @@ public class AttackState : State
 
     private void Update()
     {
-        _enemy.Flip(_attack);
+        _enemyActions.Flip(_attack);
     }
 
     private void Death(Enemy enemy)

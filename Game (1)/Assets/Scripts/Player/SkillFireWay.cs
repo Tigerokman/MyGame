@@ -9,7 +9,7 @@ public class SkillFireWay : MonoBehaviour
     [SerializeField] private int _damage;
 
     private Rigidbody2D _rigidbody;
-    private Player _player;
+    private PlayerStats _player;
     private int _knowledgeDegree = 2;
 
     private void Start()
@@ -30,7 +30,7 @@ public class SkillFireWay : MonoBehaviour
         }
     }
 
-    public void Init(Player player)
+    public void Init(PlayerStats player)
     {
         _player = player;
     }

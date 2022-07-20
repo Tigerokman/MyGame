@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] private List<Upgrade> _upgrades;
     [SerializeField] private Player _player;
+    [SerializeField] private PlayerStats _playerStats;
     [SerializeField] private UpgradeView _template;
     [SerializeField] private GameObject _upgradeContainer;
 
@@ -35,7 +36,7 @@ public class Shop : MonoBehaviour
     {
         if (_player.Money >= upgrade.Price)
         {
-            int upgradeCount = _player.Upgrade(upgrade.Label);
+            int upgradeCount = _playerStats.Upgrade(upgrade.Label);
             upgrade.PriceDecrease();
             view.PriceChange(upgrade.Price);
 

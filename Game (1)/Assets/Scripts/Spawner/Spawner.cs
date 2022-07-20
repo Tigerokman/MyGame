@@ -8,7 +8,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private List<Wave> _waves;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Player _player;
-    [SerializeField] private Fireball _fireball;
 
     private Wave _currentWave;
     private int _currentWaveNumber = 0;
@@ -63,7 +62,7 @@ public class Spawner : MonoBehaviour
     private void InstantiateEnemy()
     {
         Enemy enemy = Instantiate(_currentWave.Template, _spawnPoint.position, _spawnPoint.rotation, _spawnPoint).GetComponent<Enemy>();
-        enemy.Init(_player,_fireball);
+        enemy.Init(_player);
         enemy.Dying += OnEnemyDying;
     }
 

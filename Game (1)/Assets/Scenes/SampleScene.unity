@@ -217,7 +217,7 @@ MonoBehaviour:
   - {fileID: 6370997649573824088, guid: 946cecdd644add1419a89c842ae12f23, type: 3}
   - {fileID: 8051964862831860009, guid: 63ce9334c941ce6499c90e95769ce8db, type: 3}
   - {fileID: 6075258855262719993, guid: 8cc94f67080ffc5439db535054a655b9, type: 3}
-  _player: {fileID: 247995255}
+  _player: {fileID: 247995263}
   _template: {fileID: 5100647685017117313, guid: 8e8a62003d54d9b448ebf9cce7a500db, type: 3}
   _levelUpContainer: {fileID: 210634685}
   _panel: {fileID: 69493611}
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 557762584}
-  _player: {fileID: 247995255}
+  _player: {fileID: 247995263}
 --- !u!1 &241025639
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +972,7 @@ GameObject:
   - component: {fileID: 247995256}
   - component: {fileID: 247995255}
   - component: {fileID: 247995262}
+  - component: {fileID: 247995263}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -991,12 +992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846a20000fe057543a8a3b6de13ab013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _armorUpgrade: {fileID: 5613055946104204992, guid: 7fcf7cda6062d0e438415178564b0ce3, type: 3}
-  _weaponUpgrade: {fileID: 2799590162656126040, guid: f115c6ad42fdcd34ca243956d8928e4e, type: 3}
-  _levelUpAgility: {fileID: 8051964862831860009, guid: 63ce9334c941ce6499c90e95769ce8db, type: 3}
-  _levelUpKnowledge: {fileID: 6075258855262719993, guid: 8cc94f67080ffc5439db535054a655b9, type: 3}
-  _levelUpStrength: {fileID: 6370997649573824088, guid: 946cecdd644add1419a89c842ae12f23, type: 3}
 --- !u!114 &247995256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +1152,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attackPoint: {fileID: 2086486099}
   _skillFireWay: {fileID: 5506251211684723413, guid: f472b884a31a7b2449eecf72c481c701, type: 3}
+--- !u!114 &247995263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247995254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c6a6dc2c933114da8a0c2857e506af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _armorUpgrade: {fileID: 5613055946104204992, guid: 7fcf7cda6062d0e438415178564b0ce3, type: 3}
+  _weaponUpgrade: {fileID: 2799590162656126040, guid: f115c6ad42fdcd34ca243956d8928e4e, type: 3}
+  _levelUpAgility: {fileID: 8051964862831860009, guid: 63ce9334c941ce6499c90e95769ce8db, type: 3}
+  _levelUpKnowledge: {fileID: 6075258855262719993, guid: 8cc94f67080ffc5439db535054a655b9, type: 3}
+  _levelUpStrength: {fileID: 6370997649573824088, guid: 946cecdd644add1419a89c842ae12f23, type: 3}
 --- !u!1 &275323198
 GameObject:
   m_ObjectHideFlags: 0
@@ -14894,6 +14907,7 @@ MonoBehaviour:
   - {fileID: 2799590162656126040, guid: f115c6ad42fdcd34ca243956d8928e4e, type: 3}
   - {fileID: 5613055946104204992, guid: 7fcf7cda6062d0e438415178564b0ce3, type: 3}
   _player: {fileID: 247995255}
+  _playerStats: {fileID: 247995263}
   _template: {fileID: 659598821772201909, guid: 98a74eb96e31d9a4f81e4bc20768aa71, type: 3}
   _upgradeContainer: {fileID: 1603975187}
 --- !u!1 &1205916536

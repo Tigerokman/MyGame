@@ -6,7 +6,7 @@ using UnityEngine;
 public class StatsShow : MonoBehaviour
 {
     [SerializeField] private TMP_Text _stats;
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerStats _player;
 
     private void OnEnable()
     {

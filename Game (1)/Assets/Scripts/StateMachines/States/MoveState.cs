@@ -3,10 +3,12 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(Enemy))]
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(EnemyActions))]
 public class MoveState : State
 {
     private NavMeshAgent _agent;
     private Enemy _enemy;
+    private EnemyActions _enemyActions;
     private string _move = "IsMove";
     private float _colliderNavMesh = 0.05f;
     private float _latestPositionX;
@@ -15,6 +17,7 @@ public class MoveState : State
     {
         _enemy = GetComponent<Enemy>();
         _agent = GetComponent<NavMeshAgent>();
+        _enemyActions = GetComponent<EnemyActions>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
     }
@@ -42,7 +45,7 @@ public class MoveState : State
     private void Update()
     {
         _agent.SetDestination(Target.transform.position);
-        _enemy.Flip(_move, _latestPositionX);
+        _enemyActions.Flip(_move, _latestPositionX);
         _latestPositionX = _enemy.transform.position.x;
     }
 

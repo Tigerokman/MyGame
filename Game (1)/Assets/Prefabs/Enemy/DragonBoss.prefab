@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 7415215513258199214}
   - component: {fileID: 3282259727311819355}
   - component: {fileID: 6290172119750180538}
+  - component: {fileID: 8326933711747637010}
   m_Layer: 7
   m_Name: DragonBoss
   m_TagString: Untagged
@@ -184,12 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817b8ae045c50f84cb105762df0ff699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointAttack: {fileID: 8017146577602467955}
   _health: 1000
   _reward: 1000
   _expirience: 1000
-  _damage: 10
-  _attackRange: 0
   _speed: 5
 --- !u!50 &7834451760891984732
 Rigidbody2D:
@@ -369,3 +367,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetState: {fileID: 1783335019780752554}
   _transitionRange: 20
+--- !u!114 &8326933711747637010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613325112374317741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46b1e2c54fce0649b4fedec51377700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 0
+  _attackRange: 0
+  PointAttack: {fileID: 8017146577602467955}
+  _fireball: {fileID: 6309672801419081177, guid: bfa9e9d560a9015449690bea376624a6, type: 3}

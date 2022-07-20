@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 4367912219356014975}
   - component: {fileID: 694768241898550115}
   - component: {fileID: 709723084032359615}
+  - component: {fileID: 3017364854559000155}
   m_Layer: 3
   m_Name: StrangeEye
   m_TagString: Untagged
@@ -180,15 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71eaea47b7e6e8743af8303301a801c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointAttack: {fileID: 7618931551216668857}
   _health: 8
   _reward: 5
   _expirience: 7
-  _damage: 7
-  _attackRange: 0.8
   _speed: 3.5
-  Fireball: {fileID: 0}
-  _target: {fileID: 0}
 --- !u!114 &7618931553085028076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,3 +282,18 @@ MonoBehaviour:
   _targetState: {fileID: 4451820933149542822}
   _transitionRange: 0.7
   _rangeSpread: 0.5
+--- !u!114 &3017364854559000155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618931553085028075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a0b1083f7829744ae576bcde7e0320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 7
+  _attackRange: 0.8
+  PointAttack: {fileID: 7618931551216668857}

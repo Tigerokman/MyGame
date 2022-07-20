@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetLevelUpChoise : MonoBehaviour
 {
     [SerializeField] private List<LevelUp> _levelUps;
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerStats _player;
     [SerializeField] private LevelUpView _template;
     [SerializeField] private GameObject _levelUpContainer;
     [SerializeField] private GameObject _panel;

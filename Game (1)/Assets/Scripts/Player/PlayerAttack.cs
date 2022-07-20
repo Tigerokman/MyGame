@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent (typeof(Player))]
+[RequireComponent (typeof(PlayerStats))]
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private Transform _attackPoint;
@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
 
     private Animator _animator;
     private PlayerInput _playerInput;
-    private Player _player;
+    private PlayerStats _player;
     private int _currentAttack = 1;
     private bool _isAttack = false;
     private float _skillCooldown = 8;
@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
     {
         _playerInput = new PlayerInput();
         _animator = GetComponent<Animator>();
-        _player = GetComponent<Player>();
+        _player = GetComponent<PlayerStats>();
 
         _playerInput.Player.Attack.performed += ctx => OnAttack();
         _playerInput.Player.Skill.performed += ctx => UseSkill();

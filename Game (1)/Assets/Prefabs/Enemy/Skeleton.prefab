@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 4270046520645877178}
   - component: {fileID: 7217717915564860415}
   - component: {fileID: 8189665691292210719}
+  - component: {fileID: 5240660826933226624}
   m_Layer: 7
   m_Name: Skeleton
   m_TagString: Untagged
@@ -137,15 +138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a74cea069867c842bd3d458d10948f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointAttack: {fileID: 9103540136577853539}
   _health: 12
   _reward: 7
   _expirience: 12
-  _damage: 8
-  _attackRange: 0.96
   _speed: 3
-  Fireball: {fileID: 0}
-  _target: {fileID: 0}
 --- !u!195 &9103540137048987476
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -330,3 +326,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5240660826933226624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9103540137048987470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a0b1083f7829744ae576bcde7e0320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 8
+  _attackRange: 0.96
+  PointAttack: {fileID: 9103540136577853539}
