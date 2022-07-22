@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private List<Upgrade> _upgrades;
-    [SerializeField] private Player _player;
+    [SerializeField] private Wallet _wallet;
     [SerializeField] private PlayerStats _playerStats;
     [SerializeField] private UpgradeView _template;
     [SerializeField] private GameObject _upgradeContainer;
@@ -15,7 +15,7 @@ public class Shop : MonoBehaviour
     {
         for (int i = 0; i < _upgrades.Count; i++)
         {
-            _upgrades[i].Init(_player);
+            _upgrades[i].Init();
             AddUpgrade(_upgrades[i]);
         }
     }
@@ -34,7 +34,7 @@ public class Shop : MonoBehaviour
 
     private void TrySellUpgrade(Upgrade upgrade, UpgradeView view)
     {
-        if (_player.Money >= upgrade.Price)
+        if (_wallet.Money >= upgrade.Price)
         {
             int upgradeCount = _playerStats.Upgrade(upgrade.Label);
             upgrade.PriceDecrease();

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ExpBar : Bar
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerLevel _playerLevel;
 
     private void OnEnable()
     {
-        _player.ExpirienceAdded += OnValueChanged;
+        _playerLevel.ExpirienceAdded += OnValueChanged;
     }
 
     private void OnDisable()
     {
-        _player.ExpirienceAdded -= OnValueChanged;
+        _playerLevel.ExpirienceAdded -= OnValueChanged;
     }
 }

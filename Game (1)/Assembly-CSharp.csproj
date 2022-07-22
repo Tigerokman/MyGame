@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Other\Shop.cs" />
     <Compile Include="Assets\TopDown 2D RPG BE3\ReadMe\Scripts\ReadmeBE3.cs" />
+    <Compile Include="Assets\Scripts\Player\Wallet.cs" />
     <Compile Include="Assets\Bandits - Pixel Art\Demo\Bandit.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\Goblin.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Upgrade\Forge Upgrades\WeaponUpgrade.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Transition.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Map\Water.cs" />
     <Compile Include="Assets\Scripts\Player\SkillFireWay.cs" />
     <Compile Include="Assets\Scripts\Upgrade\Forge Upgrades\ArmorUpgrade.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Assets\Scripts\Enemy\DragonBoss.cs" />
     <Compile Include="Assets\Scripts\Ui\DeathPanel.cs" />
     <Compile Include="Assets\Scripts\Buildings\Forge.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyRangeActions.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\StateMachines\States\FlyingMoveState.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="Assets\Scripts\Upgrade\Forge Upgrades\Upgrade.cs" />
     <Compile Include="Assets\Scripts\Ui\StatsShow.cs" />
     <Compile Include="Assets\Scripts\StateMachines\States\MoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyActions.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
     <Compile Include="Assets\Scripts\Ui\MoneyBalance.cs" />
     <Compile Include="Assets\Scripts\Enemy\EvilWizard.cs" />
@@ -112,9 +116,7 @@
     <Compile Include="Assets\Scripts\Upgrade\LevelUp Upgrades\LevelUpView.cs" />
     <Compile Include="Assets\Scripts\Spawner\Spawner.cs" />
     <Compile Include="Assets\Scripts\StateMachines\States\CelebrationsState.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyActions.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyRangeActions.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

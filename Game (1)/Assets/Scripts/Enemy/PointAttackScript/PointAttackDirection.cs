@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class PointAttackDirection : MonoBehaviour
 {
-    private Transform _player;
-    private string _playerTag = "Player";
+    [SerializeField] Transform _pointAttack;
+    private Enemy _enemy;
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag(_playerTag).transform;
+        _enemy = GetComponent<Enemy>();
     }
 
     private void Update()
     {
-        Vector3 relativePosition = _player.position - transform.position;
-        Debug.DrawRay(transform.position, relativePosition * 5, Color.red);
+        Vector3 relativePosition = _enemy.Target.transform.position - _pointAttack.position;
+        Debug.DrawRay(_pointAttack.position, relativePosition * 5, Color.red);
 
-        transform.rotation = Quaternion.LookRotation(relativePosition);
+        _pointAttack.rotation = Quaternion.LookRotation(relativePosition);
     }
 }

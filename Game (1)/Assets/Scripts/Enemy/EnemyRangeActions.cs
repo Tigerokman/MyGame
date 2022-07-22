@@ -8,6 +8,7 @@ public class EnemyRangeActions : EnemyActions
 
      protected override void Attack()
     {
-        Instantiate(_fireball, PointAttack.position, Quaternion.identity);
+        Fireball fireball = Instantiate(_fireball, PointAttack.position, Quaternion.identity);
+        fireball.Init(Enemy.Target);
     }
 }

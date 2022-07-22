@@ -761,6 +761,7 @@ MonoBehaviour:
   _levelUp: {fileID: 69493611}
   _player: {fileID: 247995255}
   _deathPanel: {fileID: 1965494622}
+  _playerLevel: {fileID: 247995265}
 --- !u!1 &210634685
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +974,8 @@ GameObject:
   - component: {fileID: 247995255}
   - component: {fileID: 247995262}
   - component: {fileID: 247995263}
+  - component: {fileID: 247995264}
+  - component: {fileID: 247995265}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1170,6 +1173,30 @@ MonoBehaviour:
   _levelUpAgility: {fileID: 8051964862831860009, guid: 63ce9334c941ce6499c90e95769ce8db, type: 3}
   _levelUpKnowledge: {fileID: 6075258855262719993, guid: 8cc94f67080ffc5439db535054a655b9, type: 3}
   _levelUpStrength: {fileID: 6370997649573824088, guid: 946cecdd644add1419a89c842ae12f23, type: 3}
+--- !u!114 &247995264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247995254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33076d42d89e39e4ab082919a9446439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &247995265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247995254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9072b34dd9ba444d8db6d50c98ca7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &275323198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _money: {fileID: 1936855780}
-  _player: {fileID: 247995255}
+  _wallet: {fileID: 247995264}
 --- !u!1 &375254430
 GameObject:
   m_ObjectHideFlags: 0
@@ -9497,9 +9524,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 247995265}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 247995255}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _wallet
+      value: 
+      objectReference: {fileID: 247995264}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _waves.Array.size
       value: 11
@@ -10617,9 +10652,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 247995265}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 247995255}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _wallet
+      value: 
+      objectReference: {fileID: 247995264}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _waves.Array.size
       value: 11
@@ -11185,6 +11228,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 247995265}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _water
       value: 
       objectReference: {fileID: 1771572333}
@@ -11192,6 +11239,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 247995255}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _wallet
+      value: 
+      objectReference: {fileID: 247995264}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _waves.Array.size
       value: 11
@@ -14906,7 +14957,7 @@ MonoBehaviour:
   _upgrades:
   - {fileID: 2799590162656126040, guid: f115c6ad42fdcd34ca243956d8928e4e, type: 3}
   - {fileID: 5613055946104204992, guid: 7fcf7cda6062d0e438415178564b0ce3, type: 3}
-  _player: {fileID: 247995255}
+  _wallet: {fileID: 247995264}
   _playerStats: {fileID: 247995263}
   _template: {fileID: 659598821772201909, guid: 98a74eb96e31d9a4f81e4bc20768aa71, type: 3}
   _upgradeContainer: {fileID: 1603975187}
@@ -15096,9 +15147,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 247995265}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 247995255}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _wallet
+      value: 
+      objectReference: {fileID: 247995264}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _waves.Array.size
       value: 11
@@ -55053,9 +55112,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 247995265}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 247995255}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _wallet
+      value: 
+      objectReference: {fileID: 247995264}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _waves.Array.size
       value: 11
@@ -55904,7 +55971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slider: {fileID: 1348965326}
   Text: {fileID: 380456563}
-  _player: {fileID: 247995255}
+  _playerLevel: {fileID: 247995265}
 --- !u!1 &1603975187
 GameObject:
   m_ObjectHideFlags: 0
@@ -68940,6 +69007,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _level
+      value: 
+      objectReference: {fileID: 247995265}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _water
       value: 
       objectReference: {fileID: 1771572333}
@@ -68947,6 +69018,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 247995255}
+    - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: _wallet
+      value: 
+      objectReference: {fileID: 247995264}
     - target: {fileID: 6700249695345950393, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: _waves.Array.size
       value: 11
@@ -69086,6 +69161,10 @@ PrefabInstance:
     - target: {fileID: 6700249695345950394, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
       propertyPath: m_Name
       value: EasySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700249695345950394, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e01c1904f735af145a0ddfa07979cbce, type: 3}

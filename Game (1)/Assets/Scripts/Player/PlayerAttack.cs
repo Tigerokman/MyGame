@@ -31,10 +31,6 @@ public class PlayerAttack : MonoBehaviour
         _playerInput.Player.Skill.performed += ctx => UseSkill();
     }
 
-    private void Update()
-    {
-    }
-
     private void OnEnable()
     {
         _playerInput.Enable();
@@ -106,6 +102,5 @@ public class PlayerAttack : MonoBehaviour
         }
 
         ColldownChange?.Invoke(_skillName);
-        StopCoroutine(SkillCooldown());
     }
 }

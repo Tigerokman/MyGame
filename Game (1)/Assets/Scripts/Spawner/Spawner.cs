@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private List<Wave> _waves;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Player _player;
+    [SerializeField] private Wallet _wallet;
+    [SerializeField] private PlayerLevel _level;
 
     private Wave _currentWave;
     private int _currentWaveNumber = 0;
@@ -74,7 +76,8 @@ public class Spawner : MonoBehaviour
     private void OnEnemyDying(Enemy enemy)
     {
         enemy.Dying -= OnEnemyDying;
-        _player.AddReward(enemy.Reward, enemy.Expirience);
+        _wallet.AddReward(enemy.Reward);
+        _level.AddReward(enemy.Expirience);
     }
 }
 

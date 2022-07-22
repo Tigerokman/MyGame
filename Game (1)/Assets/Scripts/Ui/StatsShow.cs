@@ -21,6 +21,7 @@ public class StatsShow : MonoBehaviour
 
     private void StatsShowChanged()
     {
-        _stats.text = _player.LevelUpStrengthName + " - " + _player.Strength + "     " + _player.LevelUpAgilityName + " - " + _player.Agility + "     " + _player.LevelUpKnowledgeName + " - " + _player.Knowledge;
+        _stats.text = _player.LevelUpStrengthName + " - " + _player.Strength + "     " + _player.LevelUpAgilityName + "" +
+            " - " + _player.Agility + "     " + _player.LevelUpKnowledgeName + " - " + _player.Knowledge;
     }
 }

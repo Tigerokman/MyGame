@@ -8,16 +8,17 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject _levelUp;
     [SerializeField] private Player _player;
     [SerializeField] private GameObject _deathPanel;
+    [SerializeField] private PlayerLevel _playerLevel;
 
     private void OnEnable()
     {
-        _player.GotLevelUp += LevelUp;
+        _playerLevel.GotLevelUp += LevelUp;
         _player.Dying += OpenDeathPanel;
     }
 
     private void OnDisable()
     {
-        _player.GotLevelUp -= LevelUp;
+        _playerLevel.GotLevelUp -= LevelUp;
         _player.Dying -= OpenDeathPanel;
     }
 

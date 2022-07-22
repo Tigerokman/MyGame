@@ -10,7 +10,6 @@ public abstract class Upgrade : MonoBehaviour
     [SerializeField] private int _upgradeValue;
     [SerializeField] private int _buyPriceDecrease;
 
-    protected Player _player;
     private int _currentPrice;
 
     public string Label => _label;
@@ -18,10 +17,9 @@ public abstract class Upgrade : MonoBehaviour
     public Sprite Icon => _icon;
     public int UpgradeValue => _upgradeValue;
 
-    public void Init(Player player)
+    public void Init()
     {
         _currentPrice = _startPrice;
-        _player = player;
     }
 
     public void PriceDecrease()

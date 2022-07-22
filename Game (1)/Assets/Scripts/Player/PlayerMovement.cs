@@ -109,6 +109,5 @@ public class PlayerMovement : MonoBehaviour
         }
 
         ColldownChange?.Invoke(_chargeName);
-        StopCoroutine(ChargeCooldown());
     }
 }

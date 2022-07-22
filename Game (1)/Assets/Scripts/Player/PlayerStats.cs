@@ -18,6 +18,7 @@ public class PlayerStats : MonoBehaviour
     private Player _player;
     private int _countArmorUpgrade = 50;
     private int _countWeaponUpgrade = 10;
+    private float _attackRangeUp = 0.02f;
 
 
     public int Regeneration { get; private set; } = 1;
@@ -87,7 +88,7 @@ public class PlayerStats : MonoBehaviour
             _maxHealth += _armorUpgrade.UpgradeValue;
             MaxHealthIncreased?.Invoke();
             UpgradeArmor++;
-            UpgradeByed?.Invoke(_weaponUpgrade.Price);
+            UpgradeByed?.Invoke(_armorUpgrade.Price);
             _countArmorUpgrade--;
             template = _countArmorUpgrade;
         }
@@ -106,8 +107,7 @@ public class PlayerStats : MonoBehaviour
 
     private void AgilityUp()
     {
-        float attackRangeUp = 0.02f;
-        AttackRange += attackRangeUp;
+        AttackRange += _attackRangeUp;
     }
 
     private void StrengthUp()

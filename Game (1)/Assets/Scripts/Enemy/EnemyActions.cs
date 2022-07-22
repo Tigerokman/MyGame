@@ -9,12 +9,12 @@ public class EnemyActions : MonoBehaviour
     [SerializeField] private float _attackRange;
     [SerializeField] protected Transform PointAttack;
 
-    private Enemy _enemy;
+    protected Enemy Enemy;
     private bool _facingRight = true;
 
     private void Start()
     {
-        _enemy = GetComponent<Enemy>();
+        Enemy = GetComponent<Enemy>();
     }
 
     public void Flip(string flipIs, float latestPositionX = 0)
@@ -24,11 +24,11 @@ public class EnemyActions : MonoBehaviour
 
         if (flipIs == FlipAttack)
         {
-            if (_enemy.Target.transform.position.x < transform.position.x && _facingRight)
+            if (Enemy.Target.transform.position.x < transform.position.x && _facingRight)
             {
                 DoFlip();
             }
-            else if (_enemy.Target.transform.position.x > transform.position.x && !_facingRight)
+            else if (Enemy.Target.transform.position.x > transform.position.x && !_facingRight)
             {
                 DoFlip();
             }

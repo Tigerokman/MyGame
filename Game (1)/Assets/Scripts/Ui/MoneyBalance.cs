@@ -6,21 +6,21 @@ using UnityEngine;
 public class MoneyBalance : MonoBehaviour
 {
     [SerializeField] private TMP_Text _money;
-    [SerializeField] private Player _player;
+    [SerializeField] private Wallet _wallet;
 
     private void OnEnable()
     {
-        _player.MoneyChanged += MoneyViewChange;
-        _money.text = _player.Money.ToString();
+        _wallet.MoneyChanged += MoneyViewChange;
+        _money.text = _wallet.Money.ToString();
     }
 
     private void OnDisable()
     {
-        _player.MoneyChanged -= MoneyViewChange;
+        _wallet.MoneyChanged -= MoneyViewChange;
     }
 
     private void MoneyViewChange()
     {
-        _money.text = _player.Money.ToString();
+        _money.text = _wallet.Money.ToString();
     }
 }

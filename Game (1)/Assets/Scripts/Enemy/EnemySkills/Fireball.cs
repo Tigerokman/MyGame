@@ -15,7 +15,6 @@ public class Fireball : MonoBehaviour
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag(_playerTag).transform;
         _rigidbody = GetComponent<Rigidbody2D>();
         Vector3 relativePosition = _player.position - transform.position;
         _rigidbody.velocity = relativePosition * _speed;
@@ -27,6 +26,11 @@ public class Fireball : MonoBehaviour
 
         if(_timeLife <= 0 )
             Destroy(gameObject);
+    }
+
+    public void Init(Player player)
+    {
+        _player = player.transform;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

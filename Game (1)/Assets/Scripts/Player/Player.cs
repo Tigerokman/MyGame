@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent (typeof(PlayerStats))]
+[RequireComponent(typeof(Wallet))]
+[RequireComponent(typeof(PlayerStats))]
+[RequireComponent(typeof(PlayerLevel))]
 public class Player : MonoBehaviour
 {
 
@@ -13,10 +15,8 @@ public class Player : MonoBehaviour
     private bool _isInvulnerability = false;
     private int _currentHealth;
     private int _cooldownRegeneration = 3;
-    private int _expirienceToLevelUp = 100;
     private float _currentCooldownRegeneration = 0;
 
-    public int Money { get; private set; } = 0;
     public int Experience { get; private set; } = 0;
     public int Level { get; private set; } = 1;
     public int CurrentHealth => _currentHealth;
@@ -24,9 +24,6 @@ public class Player : MonoBehaviour
     public int Health => _currentHealth;
 
     public event UnityAction<int,int> HealthChanged;
-    public event UnityAction<int,int> ExpirienceAdded;
-    public event UnityAction MoneyChanged;
-    public event UnityAction GotLevelUp;
     public event UnityAction Dying;
 
     private void Start()
@@ -35,9 +32,6 @@ public class Player : MonoBehaviour
         _playerStats = GetComponent<PlayerStats>();
         _currentHealth = _playerStats.MaxHealth;
         HealthChanged?.Invoke(_currentHealth, _playerStats.MaxHealth);
-        ExpirienceAdded?.Invoke(Experience, _expirienceToLevelUp);
-        MoneyChanged?.Invoke();
-        _playerStats.UpgradeByed += Pay;
         _playerStats.MaxHealthIncreased += MaxHealthIncreased;
     }
 
@@ -56,20 +50,7 @@ public class Player : MonoBehaviour
 
     private void OnDisable()
     {
-        _playerStats.UpgradeByed -= Pay;
         _playerStats.MaxHealthIncreased -= MaxHealthIncreased;
-    }
-
-    public void AddReward(int money,int expirience)
-    {
-        Money += money;
-        MoneyChanged?.Invoke();
-        Experience += expirience;
-
-        if (Experience >= _expirienceToLevelUp)
-            LevelUp();
-
-        ExpirienceAdded?.Invoke(Experience, _expirienceToLevelUp);
     }
 
     public void TakeDamage(int damage)
@@ -93,27 +74,10 @@ public class Player : MonoBehaviour
         _isInvulnerability = !_isInvulnerability;
     }
 
-    private void LevelUp()
-    {
-        int experinceToLevelUpInsrease = 50;
-
-        Experience = Experience - _expirienceToLevelUp;
-        _expirienceToLevelUp += experinceToLevelUpInsrease;
-        Level++;
-        ExpirienceAdded?.Invoke(Experience, _expirienceToLevelUp);
-        GotLevelUp?.Invoke();
-    }
-
     private void Death()
     {
         
         Dying?.Invoke();
-    }
-
-    private void Pay(int price)
-    {
-        Money -= price;
-        MoneyChanged?.Invoke();
     }
 
     private void MaxHealthIncreased()
