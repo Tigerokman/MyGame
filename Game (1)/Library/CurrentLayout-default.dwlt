@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 63
+  controlID: 104
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 64
+  controlID: 105
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 65
+  controlID: 106
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 282
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -570,23 +570,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 1365
-      height: 612
-    m_Scale: {x: 0.28333333, y: 0.28333333}
-    m_Translation: {x: 682.5, y: 306}
+      height: 591
+    m_Scale: {x: 0.2736111, y: 0.2736111}
+    m_Translation: {x: 682.5, y: 295.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2408.8235
+      x: -2494.4163
       y: -1080
-      width: 4817.647
+      width: 4988.8325
       height: 2160
     m_MinimalGUI: 1
-  m_defaultScale: 0.28333333
+  m_defaultScale: 0.2736111
   m_LastWindowPixelSize: {x: 1365, y: 612}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -621,23 +621,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fc100000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3afbffff
+      m_SelectedIDs: 20480000
+      m_LastClickedID: 18464
+      m_ExpandedIDs: 3afbffff86490000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: NotMoneyText
+        m_OriginalName: NotMoneyText
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -2760
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -683,9 +683,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.278559, y: -3.6137624, z: -4.8260217}
+    m_Target: {x: 2571.3079, y: 1609.8286, z: -43.10424}
     speed: 2
-    m_Value: {x: 5.278559, y: -3.6137624, z: -4.8260217}
+    m_Value: {x: 2562.096, y: 1615.4652, z: -41.207108}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -736,9 +736,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.594223
+    m_Target: 440.55576
     speed: 2
-    m_Value: 11.594223
+    m_Value: 421.58444
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -826,21 +826,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Ui
+    - Assets/Scripts/Player
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 78
   m_LastFolders:
-  - Assets/Scripts/Ui
+  - Assets/Scripts/Player
   m_LastFoldersGridSize: 78
   m_LastProjectPath: C:\Users\Tigerok\Documents\GitHub\MyGame\Game (1)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 223}
-    m_SelectedIDs: 52510000
-    m_LastClickedID: 20818
+    scrollPos: {x: 0, y: 235}
+    m_SelectedIDs: 48510000
+    m_LastClickedID: 20808
     m_ExpandedIDs: 000000001e510000205100002251000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000303a00005e4d0000923e000052340000000000005a4200008e4100005e430000a24b0000a6430000d63b0000a4370000f246000036470000324c0000245d000006460000844c000070460000de4f0000d0490000f2520000485300008c530000fc520000504c00007a52000026530000eca3fdff
     m_RenameOverlay:
       m_UserAcceptedRename: 0

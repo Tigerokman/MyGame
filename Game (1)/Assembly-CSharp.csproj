@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyActions.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
     <Compile Include="Assets\Scripts\Ui\MoneyBalance.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerLevel.cs" />
     <Compile Include="Assets\Scripts\Enemy\EvilWizard.cs" />
     <Compile Include="Assets\Scripts\Enemy\StrangeEye.cs" />
     <Compile Include="Assets\Scripts\Upgrade\LevelUp Upgrades\LevelUpKnowledge.cs" />
@@ -116,7 +117,6 @@
     <Compile Include="Assets\Scripts\Upgrade\LevelUp Upgrades\LevelUpView.cs" />
     <Compile Include="Assets\Scripts\Spawner\Spawner.cs" />
     <Compile Include="Assets\Scripts\StateMachines\States\CelebrationsState.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

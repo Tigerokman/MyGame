@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private PlayerStats _playerStats;
     [SerializeField] private UpgradeView _template;
     [SerializeField] private GameObject _upgradeContainer;
+    [SerializeField] private GameObject _notMoneyText;
 
     private void Start()
     {
@@ -18,6 +19,11 @@ public class Shop : MonoBehaviour
             _upgrades[i].Init();
             AddUpgrade(_upgrades[i]);
         }
+    }
+
+    private void OnEnable()
+    {
+        _notMoneyText.SetActive(false);
     }
 
     private void AddUpgrade(Upgrade upgrade)
@@ -34,14 +40,21 @@ public class Shop : MonoBehaviour
 
     private void TrySellUpgrade(Upgrade upgrade, UpgradeView view)
     {
-        if (_wallet.Money >= upgrade.Price)
+        bool canPay = _wallet.CanPay(upgrade.Price);
+
+        if (canPay)
         {
-            int upgradeCount = _playerStats.Upgrade(upgrade.Label);
+            _notMoneyText.SetActive(false);
+            int upgradeCount = _playerStats.Upgrade(upgrade);
             upgrade.PriceDecrease();
             view.PriceChange(upgrade.Price);
 
             if (upgradeCount == 0)
                 view.UpgradeButtonClick -= OnSellUpgradeButtonClick;
+        }
+        else if (canPay == false)
+        {
+            _notMoneyText.SetActive(true);
         }
     }
 }

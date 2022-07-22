@@ -37,7 +37,6 @@ public class PlayerStats : MonoBehaviour
     public int MaxHealth => _maxHealth;
 
     public event UnityAction StatsChanged;
-    public event UnityAction<int> UpgradeByed;
     public event UnityAction MaxHealthIncreased;
 
     private void Start()
@@ -79,26 +78,17 @@ public class PlayerStats : MonoBehaviour
         return template;
     }
 
-    public int Upgrade(string nameUpgrade)
+    public int Upgrade(Upgrade upgrade)
     {
         int template = 0;
 
-        if (_armorUpgrade.Label == nameUpgrade)
+        if (_armorUpgrade == upgrade)
         {
-            _maxHealth += _armorUpgrade.UpgradeValue;
-            MaxHealthIncreased?.Invoke();
-            UpgradeArmor++;
-            UpgradeByed?.Invoke(_armorUpgrade.Price);
-            _countArmorUpgrade--;
-            template = _countArmorUpgrade;
+            template = ArmorUpgrade();
         }
-        else if (_weaponUpgrade.Label == nameUpgrade)
+        else if (_weaponUpgrade == upgrade)
         {
-            Damage += _weaponUpgrade.UpgradeValue;
-            UpgradeWeapon++;
-            UpgradeByed?.Invoke(_weaponUpgrade.Price);
-            _countWeaponUpgrade--;
-            template = _countWeaponUpgrade;
+            template = DamageUpgrade();
         }
 
         return template;
@@ -118,5 +108,30 @@ public class PlayerStats : MonoBehaviour
     private void Death()
     {
         Regeneration = 0;
+    }
+
+    private int DamageUpgrade()
+    {
+        int template = 0;
+
+        Damage += _weaponUpgrade.UpgradeValue;
+        UpgradeWeapon++;
+        _countWeaponUpgrade--;
+        template = _countWeaponUpgrade;
+
+        return template;
+    }
+
+    private int ArmorUpgrade()
+    {
+        int template = 0;
+
+        _maxHealth += _armorUpgrade.UpgradeValue;
+        MaxHealthIncreased?.Invoke();
+        UpgradeArmor++;
+        _countArmorUpgrade--;
+        template = _countWeaponUpgrade;
+
+        return template;
     }
 }

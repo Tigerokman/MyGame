@@ -18,14 +18,7 @@ public class Fireball : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         Vector3 relativePosition = _player.position - transform.position;
         _rigidbody.velocity = relativePosition * _speed;
-    }
-
-    private void Update()
-    {
-        _timeLife -= Time.deltaTime;
-
-        if(_timeLife <= 0 )
-            Destroy(gameObject);
+        Destroy(gameObject, _timeLife);
     }
 
     public void Init(Player player)

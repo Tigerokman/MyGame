@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(PlayerStats))]
 public class Wallet : MonoBehaviour
 {
-    private PlayerStats _playerStats;
 
     public int Money { get; private set; } = 0;
 
     public event UnityAction MoneyChanged;
 
-    private void Start()
+    public bool CanPay(int price)
     {
-        _playerStats = GetComponent<PlayerStats>();
-        _playerStats.UpgradeByed += Pay;
-    }
+        bool canPay = false;
 
-    private void OnDisable()
-    {
-        _playerStats.UpgradeByed -= Pay;
+        if (Money >= price)
+        {
+            canPay = true;
+            Pay(price);
+        }
+
+        return canPay;
     }
 
     public void AddReward(int money)
@@ -29,7 +29,7 @@ public class Wallet : MonoBehaviour
         MoneyChanged?.Invoke();
     }
 
-        private void Pay(int price)
+    private void Pay(int price)
     {
         Money -= price;
         MoneyChanged?.Invoke();
